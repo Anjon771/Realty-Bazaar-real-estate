@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realty Bazaar — Curated Architectural Estates & Luxury Real Estate</title>
+  <meta name="description" content="Premier real estate marketplace to discover, calculate, and connect with luxury residences, architectural estates, and verified private brokers.">
+  <meta property="og:title" content="Realty Bazaar — Curated Architectural Estates & Luxury Real Estate">
+  <meta property="og:description" content="Premier real estate marketplace to discover, calculate, and connect with luxury residences, architectural estates, and verified private brokers.">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./responsive.css">
+</head>
+<body>
+
+  <!-- ================= TOP UTILITY & MARKET PULSE BAR ================= -->
+  <div class="top-utility-bar" id="topUtilityBar">
+    <div class="container top-utility-content">
+      <div class="market-pulse">
+        <span class="pulse-indicator">
+          <span class="pulse-dot"></span> MARKET PULSE
+        </span>
+        <span>Avg 30-Year Fixed Mortgage: <strong>6.42%</strong></span>
+        <span style="opacity: 0.4;">|</span>
+        <span>Curated Q3 Private Trophy Vault Dropped</span>
+      </div>
+      <div class="utility-actions">
+        <span>Concierge: <strong>+1 (800) 492-8820</strong></span>
+        <select class="currency-select" id="currencySelector" aria-label="Select Currency">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="AED">AED (د.إ)</option>
+        </select>
+        <a href="#footer" class="utility-link">Private Client Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SITE HEADER & NAVIGATION ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <a href="#heroSection" class="brand-link" id="brandLogoLink">
+          <img src="./assets/Logo.png" alt="Realty Bazaar" class="brand-logo-img">
+        </a>
+        <span class="brand-tagline">Architectural Living</span>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="mainNavLinks">
+          <li><a href="#propertiesSection">Properties</a></li>
+          <li><a href="#mortgageLabSection">Mortgage &amp; ROI Lab</a></li>
+          <li><a href="#destinationsSection">Destinations</a></li>
+          <li><a href="#servicesSection">Advisory</a></li>
+          <li><a href="#agentsSection">Brokers</a></li>
+          <li><a href="#aboutSection">Heritage</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <!-- Compare Properties Trigger -->
+        <button class="icon-trigger-btn" id="openCompareBtn" title="Compare Properties" aria-label="Compare selected properties">
+          <i class="fa-solid fa-code-compare"></i>
+          <span class="badge-count" id="compareBadgeCount">0</span>
+        </button>
+
+        <!-- Saved Favorites Trigger -->
+        <button class="icon-trigger-btn" id="openFavoritesBtn" title="Saved Favorites" aria-label="View saved residences">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count" id="favoritesBadgeCount">0</span>
+        </button>
+
+        <!-- List Property CTA -->
+        <button class="btn-primary" id="openListPropertyBtn">
+          <i class="fa-solid fa-plus"></i>
+          <span>List Property</span>
+        </button>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="nav-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+      <ul class="mobile-nav-links">
+        <li><a href="#propertiesSection"><i class="fa-solid fa-building"></i> Curated Properties</a></li>
+        <li><a href="#mortgageLabSection"><i class="fa-solid fa-calculator"></i> Mortgage &amp; ROI Lab</a></li>
+        <li><a href="#destinationsSection"><i class="fa-solid fa-map-location-dot"></i> Prime Destinations</a></li>
+        <li><a href="#servicesSection"><i class="fa-solid fa-handshake-angle"></i> Advisory Services</a></li>
+        <li><a href="#agentsSection"><i class="fa-solid fa-user-tie"></i> Verified Brokers</a></li>
+        <li><a href="#aboutSection"><i class="fa-solid fa-compass-drafting"></i> Our Heritage</a></li>
+      </ul>
+      <div style="display: flex; gap: 10px;">
+        <button class="btn-primary" id="mobileListPropertyBtn" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-plus"></i> List Your Property
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="heroSection">
+      <div class="container">
+        <div class="hero-banner">
+          <img src="./assets/BG.png" alt="Luxury Architectural Estate" class="hero-bg-cover">
+          <div class="hero-gradient-overlay"></div>
+
+          <div class="hero-content-box">
+            <div class="hero-badge">
+              <i class="fa-solid fa-gem" style="color: var(--accent-gold);"></i>
+              <span>Curated 2026 Private Vault</span>
+            </div>
+
+            <h1 class="hero-title">
+              Exceptional Homes.<br>
+              <em>Architectural Masterpieces.</em>
+            </h1>
+
+            <p class="hero-tagline">
+              Connecting discerning homeowners and private investors with verified trophy residences, coastal sanctuaries, and high-yield metropolitan assets.
+            </p>
+
+            <!-- Search Engine Card -->
+            <div class="hero-search-wrapper" id="heroSearchWrapper">
+              <div class="search-mode-tabs">
+                <button class="search-mode-btn active" data-mode="buy" id="modeBuyBtn">Buy</button>
+                <button class="search-mode-btn" data-mode="rent" id="modeRentBtn">Rent</button>
+                <button class="search-mode-btn" data-mode="commercial" id="modeCommercialBtn">Developments</button>
+                <button class="search-mode-btn" data-mode="off-market" id="modeOffMarketBtn">Private Vault</button>
+              </div>
+
+              <div class="search-controls-row">
+                <!-- Location Field -->
+                <div class="search-field">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div class="search-field-content">
+                    <span class="search-field-label">Location</span>
+                    <select id="heroLocationFilter" aria-label="Select Target Location">
+                      <option value="all">All Prime Markets</option>
+                      <option value="beverly-hills">Beverly Hills, CA</option>
+                      <option value="manhattan">Manhattan, NY</option>
+                      <option value="miami">Miami Beach, FL</option>
+                      <option value="austin">Austin, TX</option>
+                      <option value="aspen">Aspen, CO</option>
+                      <option value="malibu">Malibu, CA</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Property Category -->
+                <div class="search-field">
+                  <i class="fa-solid fa-hotel"></i>
+                  <div class="search-field-content">
+                    <span class="search-field-label">Property Type</span>
+                    <select id="heroTypeFilter" aria-label="Select Property Type">
+                      <option value="all">All Residences</option>
+                      <option value="villa">Luxury Villa</option>
+                      <option value="penthouse">Skyline Penthouse</option>
+                      <option value="estate">Country Estate</option>
+                      <option value="waterfront">Modern Waterfront</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Price Range -->
+                <div class="search-field">
+                  <i class="fa-solid fa-sack-dollar"></i>
+                  <div class="search-field-content">
+                    <span class="search-field-label">Price Bracket</span>
+                    <select id="heroPriceFilter" aria-label="Select Price Range">
+                      <option value="all">Any Price</option>
+                      <option value="under2m">Under $2,000,000</option>
+                      <option value="2m-4m">$2M - $4,000,000</option>
+                      <option value="4m-plus">$4,000,000+</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Search Button -->
+                <button class="hero-search-btn" id="heroSearchTriggerBtn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <span>Find Estates</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Quick Filter Chips -->
+            <div class="hero-quick-tags">
+              <span>Popular Searches:</span>
+              <button class="quick-tag-chip" data-query="Malibu">Malibu Oceanfront</button>
+              <button class="quick-tag-chip" data-query="Beverly Hills">Beverly Hills Modern</button>
+              <button class="quick-tag-chip" data-query="Manhattan">Manhattan Penthouse</button>
+              <button class="quick-tag-chip" data-query="Austin">Austin Waterfront</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architectural Metrics Ribbon -->
+        <div class="hero-metrics-ribbon">
+          <div class="metric-card-ribbon">
+            <i class="fa-solid fa-vault"></i>
+            <div class="metric-info">
+              <h4>$4.8B+</h4>
+              <p>Disclosed Volume</p>
+            </div>
+          </div>
+          <div class="metric-card-ribbon">
+            <i class="fa-solid fa-earth-americas"></i>
+            <div class="metric-info">
+              <h4>35+</h4>
+              <p>Global Enclaves</p>
+            </div>
+          </div>
+          <div class="metric-card-ribbon">
+            <i class="fa-solid fa-shield-check"></i>
+            <div class="metric-info">
+              <h4>100%</h4>
+              <p>Title Certified</p>
+            </div>
+          </div>
+          <div class="metric-card-ribbon">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div class="metric-info">
+              <h4>14 Days</h4>
+              <p>Median Escrow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CURATED PROPERTIES SECTION ================= -->
+    <section class="properties-section" id="propertiesSection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subhead">Curated Listings</span>
+          <h2 class="section-title">Premier Trophy Residences</h2>
+          <p class="section-desc">Handpicked architectural properties inspected and certified by our licensed real estate advisory network.</p>
+        </div>
+
+        <!-- Filter Toolbar with View Mode Switcher -->
+        <div class="properties-toolbar">
+          <div class="filter-pills" id="categoryFilterPills">
+            <button class="filter-pill active" data-category="all">All Properties</button>
+            <button class="filter-pill" data-category="villa">Coastal Villas</button>
+            <button class="filter-pill" data-category="penthouse">Penthouses</button>
+            <button class="filter-pill" data-category="estate">Private Estates</button>
+            <button class="filter-pill" data-category="waterfront">Waterfront</button>
+          </div>
+
+          <div class="toolbar-controls-right">
+            <span class="property-count-indicator" id="propertyCountDisplay">Showing <strong>6</strong> residences</span>
+
+            <!-- View Switcher -->
+            <div class="view-mode-switcher">
+              <button class="view-mode-btn active" id="viewModeGridBtn" title="Grid View">
+                <i class="fa-solid fa-grip"></i> Grid
+              </button>
+              <button class="view-mode-btn" id="viewModeMapBtn" title="Interactive Map View">
+                <i class="fa-solid fa-map-location-dot"></i> Map
+              </button>
+            </div>
+
+            <div class="sort-select-wrapper">
+              <select id="propertySortSelect" aria-label="Sort Properties">
+                <option value="default">Sort by: Curated Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="sqft-desc">Area: Largest SqFt</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advanced Filter Sub-Bar (Bedrooms & Amenities) -->
+        <div class="advanced-filter-subbar">
+          <span style="font-size: 13px; font-weight: 700; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.05em;">
+            <i class="fa-solid fa-sliders" style="color: var(--accent-gold); margin-right: 6px;"></i> Curated Amenities:
+          </span>
+          <button class="filter-tag-chip" data-amenity="Pool">Zero-Edge Pool</button>
+          <button class="filter-tag-chip" data-amenity="Beach">Private Beach / Waterfront</button>
+          <button class="filter-tag-chip" data-amenity="Elevator">Private Elevator</button>
+          <button class="filter-tag-chip" data-amenity="Wine">Wine Cellar</button>
+          <button class="filter-tag-chip" data-amenity="Smart">Smart Automation</button>
+          <button class="filter-tag-chip" data-amenity="4+Beds">4+ Bedrooms</button>
+        </div>
+
+        <!-- Standard Grid Layout -->
+        <div class="properties-grid" id="propertiesGrid">
+          <!-- Populated dynamically via JavaScript -->
+        </div>
+
+        <!-- Split Map Layout (Toggled on "Map View") -->
+        <div class="split-map-panel" id="splitMapPanel">
+          <div class="map-properties-scroll" id="mapPropertiesScroll">
+            <!-- Populated via JavaScript -->
+          </div>
+          <div class="interactive-map-frame" id="interactiveMapFrame">
+            <!-- Simulated Architectural Stylized Map -->
+            <svg class="map-svg-grid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="none">
+              <defs>
+                <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d5dbe0" stroke-width="0.8"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="#edf2f7"/>
+              <rect width="100%" height="100%" fill="url(#gridPattern)"/>
+              <!-- Geographic stylized ribbons -->
+              <path d="M 0 320 Q 200 240 400 360 T 800 280" fill="none" stroke="#cbd5e0" stroke-width="12" stroke-linecap="round"/>
+              <path d="M 120 0 Q 240 300 180 800" fill="none" stroke="#cbd5e0" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 520 0 Q 480 400 620 800" fill="none" stroke="#cbd5e0" stroke-width="6" stroke-linecap="round"/>
+              <!-- Water body accent -->
+              <path d="M 680 0 C 650 300, 720 500, 800 600 L 800 0 Z" fill="#d9e6f2" opacity="0.7"/>
+            </svg>
+
+            <!-- Dynamic Pin Markers Container -->
+            <div id="mapPinsContainer">
+              <!-- Injected via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE MORTGAGE & ROI LAB ================= -->
+    <section class="mortgage-lab-section" id="mortgageLabSection">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subhead">Financial Modeling</span>
+          <h2 class="section-title">Mortgage &amp; Investment Yield Lab</h2>
+          <p class="section-desc">Model bespoke amortization schedules, debt servicing, and cap rate performance before structuring acquisition offers.</p>
+        </div>
+
+        <!-- Mode Switcher: Residential Loan vs Investment Cap Rate -->
+        <div class="lab-mode-switcher">
+          <button class="lab-mode-tab active" id="labModeMortgageBtn" data-mode="mortgage">
+            <i class="fa-solid fa-house-circle-check"></i> Residential Debt Estimator
+          </button>
+          <button class="lab-mode-tab" id="labModeRoiBtn" data-mode="roi">
+            <i class="fa-solid fa-chart-line"></i> Capitalization &amp; Rental Yield
+          </button>
+        </div>
+
+        <div class="mortgage-grid">
+          <!-- Inputs Column -->
+          <div class="calc-inputs-panel">
+            <div id="residentialCalcInputs">
+              <!-- Home Price Slider -->
+              <div class="calc-control-group">
+                <div class="control-header">
+                  <span class="control-title">Property Acquisition Price</span>
+                  <span class="control-display-val" id="displayHomePrice">$2,450,000</span>
+                </div>
+                <input type="range" class="range-slider" id="sliderHomePrice" min="500000" max="10000000" step="50000" value="2450000">
+              </div>
+
+              <!-- Down Payment Slider -->
+              <div class="calc-control-group">
+                <div class="control-header">
+                  <span class="control-title">Down Payment Equity</span>
+                  <span class="control-display-val" id="displayDownPayment">$490,000 (20%)</span>
+                </div>
+                <input type="range" class="range-slider" id="sliderDownPayment" min="50000" max="4000000" step="25000" value="490000">
+              </div>
+
+              <!-- Dual Control: Interest Rate & Loan Term -->
+              <div class="dual-control-row">
+                <div class="calc-control-group">
+                  <div class="control-header">
+                    <span class="control-title">Interest Rate</span>
+                    <span class="control-display-val" id="displayInterestRate">6.5%</span>
+                  </div>
+                  <input type="range" class="range-slider" id="sliderInterestRate" min="3.0" max="10.0" step="0.1" value="6.5">
+                </div>
+
+                <div class="calc-control-group">
+                  <div class="control-header">
+                    <span class="control-title">Loan Term</span>
+                  </div>
+                  <div class="term-selector-pills">
+                    <button class="term-pill" data-years="15">15 Yrs</button>
+                    <button class="term-pill" data-years="20">20 Yrs</button>
+                    <button class="term-pill active" data-years="30">30 Yrs</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dual Control: Property Tax & HOA -->
+              <div class="dual-control-row">
+                <div class="calc-control-group">
+                  <div class="control-header">
+                    <span class="control-title">Annual Property Tax</span>
+                    <span class="control-display-val" id="displayPropertyTax">$18,375</span>
+                  </div>
+                  <input type="range" class="range-slider" id="sliderPropertyTax" min="2000" max="60000" step="500" value="18375">
+                </div>
+
+                <div class="calc-control-group">
+                  <div class="control-header">
+                    <span class="control-title">Monthly HOA &amp; Maintenance</span>
+                    <span class="control-display-val" id="displayHOA">$450</span>
+                  </div>
+                  <input type="range" class="range-slider" id="sliderHOA" min="0" max="3500" step="50" value="450">
+                </div>
+              </div>
+            </div>
+
+            <!-- Investment ROI Alternative Inputs -->
+            <div id="investmentCalcInputs" style="display: none;">
+              <div class="calc-control-group">
+                <div class="control-header">
+                  <span class="control-title">Expected Monthly Lease Rate</span>
+                  <span class="control-display-val" id="displayMonthlyRent">$18,500 / mo</span>
+                </div>
+                <input type="range" class="range-slider" id="sliderMonthlyRent" min="5000" max="75000" step="500" value="18500">
+              </div>
+
+              <div class="dual-control-row">
+                <div class="calc-control-group">
+                  <div class="control-header">
+                    <span class="control-title">Vacancy &amp; Management</span>
+                    <span class="control-display-val" id="displayMgmtFee">8.0%</span>
+                  </div>
+                  <input type="range" class="range-slider" id="sliderMgmtFee" min="0" max="20" step="0.5" value="8.0">
+                </div>
+
+                <div class="calc-control-group">
+                  <div class="control-header">
+                    <span class="control-title">Annual Maintenance Reserve</span>
+                    <span class="control-display-val" id="displayMaintenanceReserve">$12,000 / yr</span>
+                  </div>
+                  <input type="range" class="range-slider" id="sliderMaintenanceReserve" min="2000" max="40000" step="1000" value="12000">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Output Results Column -->
+          <div class="calc-results-panel">
+            <p class="results-header-text" id="resultsPanelTitle">Estimated Monthly Debt Service</p>
+            <div class="monthly-total-display" id="totalMonthlyCommitment">
+              $14,369 <span>/ mo</span>
+            </div>
+
+            <!-- Proportions Visual Bar -->
+            <div class="proportions-bar" id="proportionsBarWrapper">
+              <div class="bar-segment-pi" id="barPi" style="width: 78%;" title="Principal & Interest"></div>
+              <div class="bar-segment-tax" id="barTax" style="width: 14%;" title="Property Taxes"></div>
+              <div class="bar-segment-ins" id="barIns" style="width: 5%;" title="Home Insurance"></div>
+              <div class="bar-segment-hoa" id="barHoa" style="width: 3%;" title="HOA Fees"></div>
+            </div>
+
+            <!-- Legend Breakdown -->
+            <div class="breakdown-legend-list" id="breakdownLegendList">
+              <div class="legend-item">
+                <div class="legend-label-group">
+                  <span class="legend-dot" style="background: var(--accent-gold);"></span>
+                  <span>Principal &amp; Interest</span>
+                </div>
+                <span class="legend-value" id="valPI">$12,388 / mo</span>
+              </div>
+
+              <div class="legend-item">
+                <div class="legend-label-group">
+                  <span class="legend-dot" style="background: #38bdf8;"></span>
+                  <span>Property Taxes</span>
+                </div>
+                <span class="legend-value" id="valTax">$1,531 / mo</span>
+              </div>
+
+              <div class="legend-item">
+                <div class="legend-label-group">
+                  <span class="legend-dot" style="background: #34d399;"></span>
+                  <span>Home Insurance</span>
+                </div>
+                <span class="legend-value" id="valIns">$0 / mo</span>
+              </div>
+
+              <div class="legend-item">
+                <div class="legend-label-group">
+                  <span class="legend-dot" style="background: #f472b6;"></span>
+                  <span>HOA &amp; Maintenance</span>
+                </div>
+                <span class="legend-value" id="valHoa">$450 / mo</span>
+              </div>
+            </div>
+
+            <div class="calc-action-row">
+              <button class="btn-accent" id="prequalifyAdvisorBtn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-certificate"></i> Prequalify With Preferred Lender
+              </button>
+              <button class="btn-secondary" id="openAmortizationBtn" style="color:#ffffff; background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.2);">
+                <i class="fa-solid fa-table"></i> Schedule
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARCHITECTURAL SERVICES ================= -->
+    <section class="services-section" id="servicesSection">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subhead">Bespoke Solutions</span>
+          <h2 class="section-title">End-to-End Real Estate Advisory</h2>
+          <p class="section-desc">Tailored white-glove capabilities supporting sovereign investors, institutional funds, and private homeowners.</p>
+        </div>
+
+        <div class="services-quad">
+          <div class="service-card-modern" id="serviceAppraisal">
+            <div class="service-icon-box">
+              <img src="./assets/Icon.png" alt="Property Valuation">
+            </div>
+            <h3 class="service-name">Algorithmic Valuation</h3>
+            <p class="service-desc">Precision micro-market analytics, comparative CMA analysis, and replacement cost modeling for high-end residential holdings.</p>
+          </div>
+
+          <div class="service-card-modern" id="serviceAcquisition">
+            <div class="service-icon-box">
+              <img src="./assets/Icon (1).png" alt="Buy & Sell Properties">
+            </div>
+            <h3 class="service-name">Private Acquisitions</h3>
+            <p class="service-desc">Discreet access to off-market trophy assets, architectural listings, and fiduciary representation during negotiation.</p>
+          </div>
+
+          <div class="service-card-modern" id="serviceFinancing">
+            <div class="service-icon-box">
+              <img src="./assets/Icon (2).png" alt="Mortgage Advisory">
+            </div>
+            <h3 class="service-name">Private Banking &amp; Debt</h3>
+            <p class="service-desc">Direct syndicate connections to private mortgage banking, jumbo loan structuring, and cross-collateralized lending.</p>
+          </div>
+
+          <div class="service-card-modern" id="servicePortfolio">
+            <div class="service-icon-box">
+              <img src="./assets/Icon (3).png" alt="Investment Consulting">
+            </div>
+            <h3 class="service-name">Portfolio Advisory</h3>
+            <p class="service-desc">Yield optimization, multi-family acquisition strategies, and 1031 tax-deferred exchange facilitation across top zip codes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRIME DESTINATIONS ================= -->
+    <section class="destinations-section" id="destinationsSection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subhead">Global Terraces</span>
+          <h2 class="section-title">Prime Metropolitan &amp; Coastal Markets</h2>
+          <p class="section-desc">Explore exclusive residential enclaves with verified annual appreciation and unmatched architectural pedigree.</p>
+        </div>
+
+        <div class="destinations-grid">
+          <div class="destination-card" data-city="beverly-hills">
+            <img src="./assets/Image (1).png" alt="Beverly Hills" class="dest-bg">
+            <div class="dest-overlay">
+              <h3 class="dest-name">Beverly Hills</h3>
+              <p class="dest-stat">28 Active Estates &bull; Avg $4.2M</p>
+            </div>
+          </div>
+
+          <div class="destination-card" data-city="manhattan">
+            <img src="./assets/Image (3).png" alt="Manhattan" class="dest-bg">
+            <div class="dest-overlay">
+              <h3 class="dest-name">Manhattan</h3>
+              <p class="dest-stat">42 Sky Penthouses &bull; Avg $3.9M</p>
+            </div>
+          </div>
+
+          <div class="destination-card" data-city="miami">
+            <img src="./assets/Image (2).png" alt="Miami Beach" class="dest-bg">
+            <div class="dest-overlay">
+              <h3 class="dest-name">Miami Beach</h3>
+              <p class="dest-stat">35 Waterfront Mansions &bull; Avg $2.8M</p>
+            </div>
+          </div>
+
+          <div class="destination-card" data-city="aspen">
+            <img src="./assets/Image.png" alt="Aspen" class="dest-bg">
+            <div class="dest-overlay">
+              <h3 class="dest-name">Aspen Snowmass</h3>
+              <p class="dest-stat">19 Alpine Chalets &bull; Avg $6.4M</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HERITAGE & PHILOSOPHY ================= -->
+    <section class="about-section" id="aboutSection">
+      <div class="container">
+        <div class="about-split-layout">
+          <div class="about-visual">
+            <img src="./assets/Image.png" alt="Luxury Architectural Interior" class="about-main-img">
+            <div class="about-floating-stamp">
+              <div class="stamp-stat">$4.8B+</div>
+              <div class="stamp-label">Transacted Volume</div>
+            </div>
+          </div>
+
+          <div class="about-narrative">
+            <span class="section-subhead">Our Heritage</span>
+            <h2 class="section-title">Architectural Legacy &amp; Fiduciary Trust</h2>
+            <p class="section-desc">Founded on the principle that luxury homes are livable works of art, Realty Bazaar provides an authentic, data-grounded approach to premium acquisitions.</p>
+
+            <ul class="about-feature-list">
+              <li class="about-feature-item">
+                <i class="fa-solid fa-certificate"></i>
+                <span><strong>100% Certified Legal Title Verification:</strong> Every home in our portfolio undergoes structural audit and title insurance verification prior to publication.</span>
+              </li>
+              <li class="about-feature-item">
+                <i class="fa-solid fa-user-shield"></i>
+                <span><strong>Vetted Top 1% Private Brokers:</strong> Licensed professionals bound by strict fiduciary confidentiality and non-disclosure standards.</span>
+              </li>
+              <li class="about-feature-item">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span><strong>Institutional Analytics:</strong> Real-time access to transaction histories, neighborhood appreciation projections, and capitalization rates.</span>
+              </li>
+            </ul>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <button class="btn-primary" id="aboutConsultationBtn">
+                <i class="fa-regular fa-calendar"></i> Book Private Consultation
+              </button>
+              <button class="btn-secondary" id="aboutAuditBtn">
+                View Certified Audit Protocol
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VERIFIED BROKER DIRECTORY ================= -->
+    <section class="agents-section" id="agentsSection">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subhead">Certified Advisory</span>
+          <h2 class="section-title">Meet Our Managing Partners</h2>
+          <p class="section-desc">Direct fiduciary representation from nationally recognized luxury real estate specialists.</p>
+        </div>
+
+        <div class="agents-grid">
+          <!-- Agent 1 -->
+          <div class="agent-card">
+            <div class="agent-portrait-wrapper">
+              <img src="./assets/Mask group.png" alt="Julian Montgomery" class="agent-portrait">
+              <div class="agent-verified-badge" title="Verified Broker"><i class="fa-solid fa-check"></i></div>
+            </div>
+            <h3 class="agent-name">Julian Montgomery</h3>
+            <p class="agent-role">Managing Principal &bull; West Coast</p>
+            <div class="agent-stats-strip">
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">$620M</span>
+                <span class="agent-stat-lbl">Career Volume</span>
+              </div>
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">14 Yrs</span>
+                <span class="agent-stat-lbl">Experience</span>
+              </div>
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">100%</span>
+                <span class="agent-stat-lbl">Five Star</span>
+              </div>
+            </div>
+            <button class="agent-connect-btn contact-broker-btn" data-broker="Julian Montgomery">
+              <i class="fa-regular fa-envelope"></i> Request Introduction
+            </button>
+          </div>
+
+          <!-- Agent 2 -->
+          <div class="agent-card">
+            <div class="agent-portrait-wrapper">
+              <img src="./assets/Mask group (1).png" alt="Elena Vance" class="agent-portrait">
+              <div class="agent-verified-badge" title="Verified Broker"><i class="fa-solid fa-check"></i></div>
+            </div>
+            <h3 class="agent-name">Elena Vance</h3>
+            <p class="agent-role">Head of Coastal &amp; Waterfront</p>
+            <div class="agent-stats-strip">
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">$480M</span>
+                <span class="agent-stat-lbl">Career Volume</span>
+              </div>
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">11 Yrs</span>
+                <span class="agent-stat-lbl">Experience</span>
+              </div>
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">99.4%</span>
+                <span class="agent-stat-lbl">Rating</span>
+              </div>
+            </div>
+            <button class="agent-connect-btn contact-broker-btn" data-broker="Elena Vance">
+              <i class="fa-regular fa-envelope"></i> Request Introduction
+            </button>
+          </div>
+
+          <!-- Agent 3 -->
+          <div class="agent-card">
+            <div class="agent-portrait-wrapper">
+              <img src="./assets/Mask group (2).png" alt="Alexander Sterling" class="agent-portrait">
+              <div class="agent-verified-badge" title="Verified Broker"><i class="fa-solid fa-check"></i></div>
+            </div>
+            <h3 class="agent-name">Alexander Sterling</h3>
+            <p class="agent-role">Managing Director &bull; Manhattan</p>
+            <div class="agent-stats-strip">
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">$790M</span>
+                <span class="agent-stat-lbl">Career Volume</span>
+              </div>
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">16 Yrs</span>
+                <span class="agent-stat-lbl">Experience</span>
+              </div>
+              <div class="agent-stat-box">
+                <span class="agent-stat-val">100%</span>
+                <span class="agent-stat-lbl">Rating</span>
+              </div>
+            </div>
+            <button class="agent-connect-btn contact-broker-btn" data-broker="Alexander Sterling">
+              <i class="fa-regular fa-envelope"></i> Request Introduction
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PARTNERS RIBBON ================= -->
+    <div class="partners-section">
+      <div class="container">
+        <div class="partners-strip">
+          <img src="./assets/Our Partners.png" alt="Global Real Estate Affiliates &amp; Architectural Partners">
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CLIENT TESTIMONIALS ================= -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subhead">Client Endorsements</span>
+          <h2 class="section-title">Trusted by Discerning Collectors</h2>
+          <p class="section-desc">Read reflections from homeowners, institutional trustees, and private family offices.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-quote-card">
+            <div class="quote-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote-body">
+              "The speed and discretion with which Realty Bazaar orchestrated our acquisition in Beverly Hills was beyond reproach. Their mortgage modeling gave us exact clarity from day one."
+            </p>
+            <div class="client-profile-row">
+              <img src="./assets/Mask group.png" alt="Sophia Anderson" class="client-avatar-img">
+              <div class="client-meta">
+                <h4>Sophia Anderson</h4>
+                <p>Acquired Coldwater Canyon Villa</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-quote-card">
+            <div class="quote-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote-body">
+              "As a private investor building a coastal portfolio, finding verified listings without inaccurate MLS duplicates was refreshing. Elena Vance navigated our escrow with absolute masterclass diligence."
+            </p>
+            <div class="client-profile-row">
+              <img src="./assets/Mask group (1).png" alt="Marcus Sterling" class="client-avatar-img">
+              <div class="client-meta">
+                <h4>Marcus Sterling</h4>
+                <p>Private Equity Principal &bull; Miami</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-quote-card">
+            <div class="quote-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote-body">
+              "The architectural photography and detailed spatial layouts allowed us to evaluate the Manhattan penthouse remotely from Geneva before completing a seamless private closing."
+            </p>
+            <div class="client-profile-row">
+              <img src="./assets/Mask group (2).png" alt="Elena Rostova" class="client-avatar-img">
+              <div class="client-meta">
+                <h4>Elena Rostova</h4>
+                <p>Architectural Designer &bull; New York</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MOBILE APP & PRIVATE VAULT ================= -->
+    <section class="app-vault-section">
+      <div class="container">
+        <div class="vault-card-wrapper">
+          <div class="vault-text-col">
+            <span class="section-subhead" style="color: var(--accent-gold);">Digital Architecture</span>
+            <h2 class="vault-title">Experience Realty Bazaar Anywhere</h2>
+            <p class="vault-desc">
+              Download the Realty Bazaar Private Client app for instant biometric access to off-market drops, direct encrypted broker chat, and augmented reality floor plan walkthroughs.
+            </p>
+            <div class="app-badges-row">
+              <img src="./assets/Download From.png" alt="Download on the App Store and Google Play" id="appDownloadBadges">
+            </div>
+          </div>
+          <div class="vault-side-preview">
+            <img src="./assets/Calculator-rafiki 1.png" alt="Realty Bazaar App Interface Mockup">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div class="footer-col-brand">
+          <img src="./assets/Logo.png" alt="Realty Bazaar" style="height: 38px; filter: brightness(0) invert(1);">
+          <p>
+            Curating premier residential estates and architectural sanctuaries worldwide. Built with uncompromising dedication to discretion and fiduciary stewardship.
+          </p>
+          <div class="footer-socials">
+            <a href="javascript:void(0)" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Portfolio</h4>
+          <ul class="footer-link-list">
+            <li><a href="#propertiesSection">Beverly Hills Estates</a></li>
+            <li><a href="#propertiesSection">Manhattan Penthouses</a></li>
+            <li><a href="#propertiesSection">Miami Waterfront Villas</a></li>
+            <li><a href="#propertiesSection">Aspen Ski Chalets</a></li>
+            <li><a href="#propertiesSection">Off-Market Vault</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Advisory</h4>
+          <ul class="footer-link-list">
+            <li><a href="#mortgageLabSection">Mortgage &amp; ROI Lab</a></li>
+            <li><a href="#servicesSection">Algorithmic Valuation</a></li>
+            <li><a href="#agentsSection">Verified Broker Network</a></li>
+            <li><a href="#aboutSection">Auditing Protocol</a></li>
+            <li><a href="javascript:void(0)" id="footerPrivacyLink">Privacy &amp; Security</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Market Intelligence</h4>
+          <p style="font-size: 13px; color: #8c9dae; line-height: 1.6;">
+            Subscribe to our quarterly White Paper on luxury residential cap rates and prime global transactions.
+          </p>
+          <form class="newsletter-subscribe-box" id="footerNewsletterForm">
+            <input type="email" placeholder="Your work email address" id="newsletterEmailInput" required>
+            <button type="submit" class="btn-primary" style="padding: 10px 16px;">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+          <div style="margin-top: 14px; font-size: 12px; color: #586776;">
+            <i class="fa-solid fa-lock"></i> Strictly confidential. Zero spam.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Realty Bazaar Inc. All rights reserved. Equal Housing Opportunity.</p>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)" id="legalEqualHousing">Equal Housing</a>
+          <a href="javascript:void(0)" id="legalTerms">Terms of Service</a>
+          <a href="javascript:void(0)" id="legalLicensing">Licensing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= INTERACTIVE SLIDE-OVER: SAVED FAVORITES ================= -->
+  <div class="slide-drawer-backdrop" id="favoritesDrawerBackdrop"></div>
+  <aside class="slide-drawer-panel" id="favoritesDrawerPanel" aria-label="Saved Properties Drawer">
+    <div class="drawer-header">
+      <h4 class="drawer-title"><i class="fa-solid fa-heart" style="color: #e11d48;"></i> Saved Residences (<span id="drawerFavCount">0</span>)</h4>
+      <button class="drawer-close-btn" id="closeFavoritesDrawerBtn" aria-label="Close saved properties">&times;</button>
+    </div>
+    <div class="drawer-body" id="favoritesDrawerBody">
+      <div class="drawer-empty-state" id="favoritesEmptyState">
+        <i class="fa-regular fa-heart"></i>
+        <h4>No Saved Residences</h4>
+        <p style="font-size: 13px; margin-top: 6px;">Click the heart icon on any estate to store and compare listings here.</p>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <button class="btn-primary" id="inquireAllSavedBtn" style="width: 100%; justify-content: center;">
+        <i class="fa-solid fa-paper-plane"></i> Request Portfolio Consultation
+      </button>
+    </div>
+  </aside>
+
+  <!-- ================= COMPARISON BOTTOM TRAY ================= -->
+  <div class="comparison-tray" id="comparisonTray">
+    <div class="tray-inner">
+      <div>
+        <strong style="font-size: 14px;">Property Comparison Tray (<span id="trayCompareCount">0</span>/3)</strong>
+        <p style="font-size: 12px; color: var(--text-secondary);">Select up to 3 estates to evaluate side-by-side specifications.</p>
+      </div>
+      <div class="tray-items-row" id="trayItemsRow"></div>
+      <div class="tray-actions">
+        <button class="btn-secondary" id="clearCompareTrayBtn">Clear All</button>
+        <button class="btn-primary" id="openComparisonModalBtn">
+          <i class="fa-solid fa-table-columns"></i> View Comparison
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: PROPERTY DETAILS QUICK VIEW ================= -->
+  <div class="modal-overlay" id="propertyDetailsModal">
+    <div class="modal-dialog modal-wide">
+      <button class="modal-close-trigger" id="closePropertyDetailsBtn" aria-label="Close details">&times;</button>
+      <div id="propertyModalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: 30-YEAR AMORTIZATION SCHEDULE ================= -->
+  <div class="modal-overlay" id="amortizationModal">
+    <div class="modal-dialog modal-wide">
+      <button class="modal-close-trigger" id="closeAmortizationModalBtn" aria-label="Close amortization">&times;</button>
+      <h3 class="modal-title-serif"><i class="fa-solid fa-table-list" style="color: var(--accent-gold);"></i> Complete Amortization Schedule</h3>
+      <p class="modal-subtitle">Comprehensive year-by-year schedule of principal equity accumulation, debt paydown, and interest amortized over 30 years.</p>
+      <div id="amortizationScheduleTableContainer" style="overflow-x: auto; margin-top: 16px;">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: LIST YOUR PROPERTY ================= -->
+  <div class="modal-overlay" id="listPropertyModal">
+    <div class="modal-dialog">
+      <button class="modal-close-trigger" id="closeListPropertyModalBtn" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title-serif"><i class="fa-solid fa-house-chimney-medical" style="color: var(--accent-gold);"></i> List Your Residence</h3>
+      <p class="modal-subtitle">Submit your property for certified evaluation and placement in our exclusive portfolio.</p>
+
+      <form id="listPropertyForm">
+        <div class="form-group-field">
+          <label for="newPropTitle">Estate or Residence Title *</label>
+          <input type="text" id="newPropTitle" placeholder="e.g. Sierra Madre Contemporary Villa" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div class="form-group-field">
+            <label for="newPropLocation">Location / Enclave *</label>
+            <input type="text" id="newPropLocation" placeholder="e.g. Beverly Hills, CA" required>
+          </div>
+          <div class="form-group-field">
+            <label for="newPropPrice">Target Price ($) *</label>
+            <input type="number" id="newPropPrice" placeholder="e.g. 3250000" min="100000" required>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
+          <div class="form-group-field">
+            <label for="newPropBeds">Bedrooms</label>
+            <input type="number" id="newPropBeds" value="4" min="1">
+          </div>
+          <div class="form-group-field">
+            <label for="newPropBaths">Bathrooms</label>
+            <input type="number" id="newPropBaths" value="3.5" step="0.5" min="1">
+          </div>
+          <div class="form-group-field">
+            <label for="newPropSqft">Interior SqFt</label>
+            <input type="number" id="newPropSqft" value="3800" min="500">
+          </div>
+        </div>
+
+        <div class="form-group-field">
+          <label for="newPropType">Property Category</label>
+          <select id="newPropType">
+            <option value="villa">Coastal Villa</option>
+            <option value="penthouse">Penthouse</option>
+            <option value="estate">Private Estate</option>
+            <option value="waterfront">Waterfront Modern</option>
+          </select>
+        </div>
+
+        <div class="form-group-field">
+          <label for="newPropOwnerEmail">Owner / Representative Email *</label>
+          <input type="email" id="newPropOwnerEmail" placeholder="principal@familyoffice.com" required>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <i class="fa-solid fa-shield-check"></i> Submit for Fiduciary Audit &amp; Listing
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: SCHEDULE PRIVATE SHOWING ================= -->
+  <div class="modal-overlay" id="showingModal">
+    <div class="modal-dialog">
+      <button class="modal-close-trigger" id="closeShowingModalBtn" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title-serif"><i class="fa-regular fa-calendar-check" style="color: var(--accent-gold);"></i> Request Private Showing</h3>
+      <p class="modal-subtitle" id="showingPropertyTitle">The Grand Palm Villa &bull; Beverly Hills, CA</p>
+
+      <form id="showingForm">
+        <div class="form-group-field">
+          <label for="showingName">Your Full Name</label>
+          <input type="text" id="showingName" placeholder="e.g. Katherine Vance" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div class="form-group-field">
+            <label for="showingEmail">Email Address</label>
+            <input type="email" id="showingEmail" placeholder="katherine@vance.com" required>
+          </div>
+          <div class="form-group-field">
+            <label for="showingPhone">Phone Number</label>
+            <input type="tel" id="showingPhone" placeholder="+1 (310) 555-0199" required>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div class="form-group-field">
+            <label for="showingDate">Preferred Date</label>
+            <input type="date" id="showingDate" required>
+          </div>
+          <div class="form-group-field">
+            <label for="showingType">Tour Format</label>
+            <select id="showingType">
+              <option value="in-person">In-Person Private Escort</option>
+              <option value="live-video">Live 4K Virtual Walkthrough</option>
+              <option value="broker-only">Broker Exclusive Preview</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group-field">
+          <label for="showingNotes">Special Requests or Verification Notes</label>
+          <textarea id="showingNotes" rows="3" placeholder="Discreet access requirements, proof of funds confirmation, or specific architectural questions..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-lock"></i> Confirm Appointment Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: SIDE-BY-SIDE PROPERTY COMPARISON ================= -->
+  <div class="modal-overlay" id="compareModal">
+    <div class="modal-dialog modal-wide">
+      <button class="modal-close-trigger" id="closeCompareModalBtn" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title-serif"><i class="fa-solid fa-table-columns" style="color: var(--accent-gold);"></i> Side-by-Side Property Comparison</h3>
+      <p class="modal-subtitle">Comparative evaluation of architectural specifications, valuation metrics, and amenities.</p>
+
+      <div id="compareTableContainer" style="overflow-x: auto; margin-top: 20px;">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="rb-toast-container" id="rbToastContainer"></div>
+
+  <!-- Core JavaScript -->
+  <script src="./script.js"></script>
+</body>
+</html>

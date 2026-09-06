@@ -1,0 +1,184 @@
+/* =========================================================
+   REALTY BAZAAR — RESPONSIVE ADAPTATIONS
+========================================================= */
+
+@media (max-width: 1200px) {
+  .properties-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-quad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mortgage-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .hero-metrics-ribbon {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split-map-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .interactive-map-frame {
+    height: 480px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-links, .brand-tagline {
+    display: none;
+  }
+
+  .nav-toggle-btn {
+    display: inline-flex;
+  }
+
+  .hero-title {
+    font-size: 44px;
+  }
+
+  .hero-content-box {
+    padding: 40px 28px;
+  }
+
+  .search-controls-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-search-btn {
+    grid-column: span 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-split-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-floating-stamp {
+    position: static;
+    margin-top: 16px;
+  }
+
+  .vault-card-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .app-badges-row {
+    justify-content: center;
+  }
+
+  .agents-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 56px 0;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .top-utility-bar {
+    display: none;
+  }
+
+  .hero-metrics-ribbon {
+    grid-template-columns: 1fr;
+  }
+
+  .properties-grid,
+  .services-quad,
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-controls-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-search-btn {
+    grid-column: span 1;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-banner {
+    min-height: auto;
+  }
+
+  .hero-content-box {
+    padding: 28px 18px;
+  }
+
+  .calc-inputs-panel {
+    padding: 20px;
+  }
+
+  .calc-results-panel {
+    padding: 24px;
+  }
+
+  .monthly-total-display {
+    font-size: 38px;
+  }
+
+  .dual-control-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .property-modal-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-amenities-checklist {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .floorplan-level-row {
+    grid-template-columns: 1fr;
+  }
+
+  .tray-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tray-items-row {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Realty Bazaar",
+  "description": "Premier real estate marketplace to discover, calculate, and connect with luxury properties, estates, and verified real estate agents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
